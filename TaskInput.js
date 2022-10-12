@@ -20,7 +20,7 @@ export default TaskInput = (properties) => {
             value = {task} 
             onChangeText = {text => setTask(text)}
             placeholder={'Add new task'}
-            placeholderTextColor = '#9e9e9e'/>
+            placeholderTextColor = '#fff'/>
             <TouchableOpacity onPress={()=> handleAdding(task)}>
                 <View style = {styles.button}>
                     <MaterialIcons name="add" size={24} color="black" />
@@ -33,10 +33,10 @@ export default TaskInput = (properties) => {
 const styles = StyleSheet.create({
     container: {
         borderColor: '#fff',
-        backgroundColor: '#3E3364',
+        backgroundColor: '#219ebc',
         borderWidth: 1,
         marginHorizontal: 20,
-        borderRadius: 12,
+        borderRadius: 20,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',

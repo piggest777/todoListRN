@@ -5,10 +5,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 export default Task = (task) =>  {
     return(
         <View style = {styles.container}>
-            <View style = {styles.indexContainer}>
+            {/* <View style = {styles.indexContainer}>
                 <Text style={styles.index}>{task.index}</Text>
-            </View>
+            </View> */}
             <View style={styles.taskContainer}>
+              <Text style={styles.index}>{task.index + ". "}</Text>
                 <Text style = {styles.task}>{task.task}</Text>
                 <TouchableOpacity onPress={()=> task.deleteTask()}>
                     <MaterialIcons style = {styles.delete} name="delete" size={20} color='#F9F7F5'/>
@@ -24,7 +25,7 @@ export default Task = (task) =>  {
             marginHorizontal: 15,
         },
         indexContainer: {
-            backgroundColor: '#3E3364',
+            backgroundColor: '#219ebc',
             borderRadius: 12,
             marginRight: 10,
             alignItems: 'center',
@@ -37,7 +38,7 @@ export default Task = (task) =>  {
             fontSize: 20,
         },
         taskContainer: {
-            backgroundColor: '#3E3364',
+            backgroundColor: '#219ebc',
             borderRadius: 12,
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -50,9 +51,9 @@ export default Task = (task) =>  {
         task: {
             color: '#fff',
             width: '90%',
-            fontSize: 16,
+            fontSize: 20,
         },
         delete: {
-            marginLeft: 10,
+            marginLeft: -10,
         },
     })
